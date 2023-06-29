@@ -1,0 +1,10 @@
+name: refactor
+channels:
+  - defaults
+dependencies:
+  - python[version='>=3.6']
+  - cookiecutter
+  - ipykernel
+  - pandas
+  - scikit-learn
+prefix: C:\Users\rluec\anaconda3\envs\refactor
