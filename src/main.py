@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 # coding: utf-8
 
 # <a id='Q0'></a>
@@ -54,13 +55,23 @@ from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 from sklearn.pipeline import Pipeline
 
+import os
+import dotenv
+
+project_dir = os.path.join(os.path.dirname(__file__), os.pardir)
+dotenv_path = os.path.join(project_dir, '.env')
+dotenv.load_dotenv(dotenv_path)
+
+data_path = os.getenv("DATA_PATH")
 
 # ### User Dependent Variables
 
 # In[19]:
 
+# cd C:\Users\rluec\Documents\propulsion\github\california_housing_predicting
+# C:\Users\rluec\Documents\propulsion\github\california_housing_predicting> python -m src.main
 
-data_path = "../data/raw/california_housing_0.csv"
+# data_path = "./data/raw/california_housing_0.csv"
 
 
 # <a id='P1'></a>
@@ -73,6 +84,7 @@ data = pd.read_csv(data_path)
 
 
 # ### Data Exploration
+
 
 # In[21]:
 
