@@ -7,6 +7,4 @@ dependencies:
   - ipykernel
   - pandas
   - scikit-learn
-  - os
-  - dotenv
 prefix: C:\Users\rluec\anaconda3\envs\refactor
