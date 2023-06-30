@@ -15,9 +15,12 @@ def main(input_filepath, output_filepath):
     # Data Preparation
     data = pd.read_csv(input_filepath)
     # Data Exploration
-    data.head()
-    data.shape
-    data.isna().sum()
+    #data.head()
+    #data.shape
+    #data.isna().sum()
+    logger.info(f"Read csv file {input_filepath},\n here are the first rows:\n {data.head().to_string()}")
+    logger.info(f"The dataframe shape is {data.shape}")
+    logger.info(f"Na count per column:\n{data.isna().sum()}")
     # Data Cleaning
     data = data.drop(columns="total_bedrooms")
     # Train-Test Split
