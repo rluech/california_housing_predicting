@@ -40,3 +40,9 @@ logger.info("MAE", metrics.mean_absolute_error(y_test, predictions_mlr))
 logger.info("MSE", metrics.mean_squared_error(y_test, predictions_mlr))
 logger.info("RMSE", np.sqrt(metrics.mean_squared_error(y_test, predictions_mlr)))
 logger.info("Explained Var Score", metrics.explained_variance_score(y_test, predictions_mlr))
+
+with open(model_file_name, "wb") as f:
+    dump(pipeline_mlr, f)
+
+with open(model_file_name, "rb") as f:
+    pipeline_mlr = load(f)
